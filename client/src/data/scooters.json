@@ -1,0 +1,12 @@
+[
+  {
+    "id": "scooter-1",
+    "image": "/images/scooter.jpg",
+    "type": "Electric",
+    "name": "Scooter model",
+    "engine": "1500W",
+    "mileage": "80 km range",
+    "year": "2026",
+    "price": 41500
+  }
+]

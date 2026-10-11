@@ -1,0 +1,93 @@
+{
+  "business": {
+    "name": "Anika P Enterprises",
+    "tagline": "Ride Green. Save Future.",
+    "contactPerson": "Prem Prakash Chaudhary",
+    "phone": "7355364697",
+    "whatsapp": "917355364697",
+    "address": "Kithuri, Munderwa, Basti (U.P.) - 272170",
+    "financePartner": "Bajaj Finance"
+  },
+  "scooters": [
+    {
+      "slug": "alfa-dhl-belt",
+      "name": "Alfa dhl (Belt)",
+      "type": "Belt",
+      "price": 55500,
+      "specs": { "tyre": "12/12", "battery": "72V", "motorWatt": 1500, "charger": "4A", "brake": null },
+      "warranty": { "motor": "2 Year", "controller": "1 Year", "charger": "1 Year", "shocker": "6 Month", "tyre": "6 Month" },
+      "features": ["Music system", "Side stand sensor", "Bluetooth system", "Leather seat cover", "Waterproof motor", "Lead acid and lithium battery options", "High quality fiber body", "7-time adjustable rear shocker", "Welcome tune", "3-layer fiber paint"],
+      "images": ["/images/alfa-dhl-1.jpg"],
+      "featured": false
+    },
+    {
+      "slug": "alfa-plus-bldc",
+      "name": "Alfa+ (BLDC)",
+      "type": "BLDC",
+      "price": 41500,
+      "specs": { "tyre": "12/10", "battery": "60V", "motorWatt": 1000, "charger": "4A", "brake": null },
+      "warranty": { "motor": "1 Year", "controller": "1 Year", "charger": "1 Year", "shocker": "6 Month", "tyre": "6 Month" },
+      "features": ["Music system", "Side stand sensor", "Bluetooth system", "High quality fiber body", "Leather seat cover", "Lead acid and lithium battery options", "7-time adjustable shocker", "Welcome tune", "3-layer fiber paint"],
+      "images": ["/images/alfa-plus-1.jpg"],
+      "featured": true
+    },
+    {
+      "slug": "nuzzle-smooth-ride-belt",
+      "name": "Nuzzle Smooth Ride (Belt)",
+      "type": "Belt",
+      "price": 56900,
+      "specs": { "tyre": "12/12", "battery": "72V", "motorWatt": 1500, "charger": "4A", "brake": null },
+      "warranty": { "motor": "2 Year", "controller": "2 Year", "charger": "1 Year", "shocker": "6 Month", "tyre": "6 Month" },
+      "features": ["Side stand sensor", "Music system", "Bluetooth system", "High quality fiber body", "7-time adjustable shocker", "3-layer fiber paint", "Welcome tune", "Lead acid and lithium battery options", "Leather seat cover", "Floppy key system"],
+      "images": ["/images/nuzzle-smooth-ride-1.jpg"],
+      "featured": false
+    },
+    {
+      "slug": "nuzzle-plus-bldc",
+      "name": "Nuzzle+ (BLDC)",
+      "type": "BLDC",
+      "price": 42900,
+      "specs": { "tyre": "12/10", "battery": "60V", "motorWatt": 1000, "charger": "4A", "brake": null },
+      "warranty": { "motor": "1 Year", "controller": "1 Year", "charger": "1 Year", "shocker": "6 Month", "tyre": "6 Month" },
+      "features": ["Side stand sensor", "Music system", "Bluetooth system", "Floppy key system", "Leather seat cover", "High quality fiber body", "Lead acid and lithium battery options"],
+      "images": ["/images/nuzzle-plus-1.jpg"],
+      "featured": false
+    },
+    {
+      "slug": "e-light-belt",
+      "name": "E-light (Belt)",
+      "type": "Belt",
+      "price": 59900,
+      "specs": { "tyre": "12/12", "battery": "72V", "motorWatt": 1500, "charger": "4A", "brake": "Combo brake" },
+      "warranty": { "motor": "2 Year", "controller": "2 Year", "charger": "1 Year", "shocker": "6 Month", "tyre": "6 Month" },
+      "features": ["Music system", "Bluetooth system", "Welcome tone", "High quality fiber", "Floppy key", "Leather seat cover", "Side stand sensor", "Lead acid and lithium battery options", "Eye projector lamp", "Waterproof motor", "3-layer paint", "7-time adjustable shocker"],
+      "images": ["/images/e-light-1.jpg"],
+      "featured": true
+    },
+    {
+      "slug": "bimmer-bldc",
+      "name": "Bimmer (BLDC)",
+      "type": "BLDC",
+      "price": 59900,
+      "specs": { "tyre": "12/12", "battery": "60V", "motorWatt": 1200, "charger": "4A", "brake": "Double disk brake" },
+      "warranty": { "motor": "1 Year", "controller": "1 Year", "charger": "1 Year", "shocker": "6 Month", "tyre": "6 Month", "chassis": "2 Year" },
+      "features": ["Floppy key", "Music system", "Bluetooth system", "Welcome tune", "Leather seat cover", "7-time adjustable shocker", "3-layer fiber paint", "High quality fiber", "Waterproof motor"],
+      "images": ["/images/bimmer-1.jpg"],
+      "featured": false
+    },
+    {
+      "slug": "star-booster-bldc",
+      "name": "Star Booster (BLDC)",
+      "type": "BLDC",
+      "price": 56500,
+      "specs": { "tyre": "12/12", "battery": "60V", "motorWatt": 1200, "charger": "4A", "brake": "Dual disk brake" },
+      "warranty": { "motor": "1 Year", "controller": "1 Year", "charger": "1 Year", "shocker": "6 Month", "tyre": "6 Month" },
+      "features": ["Floppy key", "Music system", "Bluetooth system", "Welcome tune", "7-time adjustable rear shocker", "3-layer fiber paint", "High quality fiber", "Waterproof motor", "Side stand sensor"],
+      "images": ["/images/star-booster-1.jpg"],
+      "featured": true
+    }
+  ],
+  "reviews": [
+    { "name": "[Customer name]", "town": "[Town]", "text": "[Customer review text]" }
+  ]
+}
