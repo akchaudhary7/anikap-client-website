@@ -111,8 +111,8 @@ export default function Home() {
           </div>
 
          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {popularScooters.map((scooter) => (
-              <ScooterCard key={scooter.id} scooter={scooter} />
+            {popularScooters.slice(0,3).map((scooter) => (
+              <ScooterCard key={scooter._id} scooter={scooter} />
             ))}
           </div>
         </Container>

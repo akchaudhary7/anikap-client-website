@@ -6,6 +6,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import scooters from "./data/scooters.json";
 import { formatPrice } from "./utils/formatPrice";
+import ScooterDetails from "./pages/ScooterDetails";
 
 
 function ScooterDetails() {

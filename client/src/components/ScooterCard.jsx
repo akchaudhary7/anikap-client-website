@@ -11,8 +11,9 @@ export default function ScooterCard({ scooter }) {
 
   return (
     <article className="overflow-hidden rounded-2xl border border-line bg-white">
-      <Link
-        to={`/scooters/${scooter.id}`}
+      <Link 
+      to={`/scooters/${scooter._id}`}
+        
         aria-label={`View ${scooter.name} details`}
         className="block"
       >
@@ -39,7 +40,7 @@ export default function ScooterCard({ scooter }) {
         </p>
 
         <Link
-          to={`/scooters/${scooter.id}`}
+          to={`/scooters/${scooter._id}`}
           className="mt-3 inline-block text-sm font-extrabold text-leaf hover:underline"
         >
           View details →
