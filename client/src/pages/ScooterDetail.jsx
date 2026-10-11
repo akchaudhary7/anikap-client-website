@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Container from "../components/Container";
-import { scooters } from "../assets";
+import { scooters } from "../assets/assets.js";
 import { formatPrice } from "../utils/formatPrice";
 import { buildWhatsAppLink } from "../utils/whatsapp";
 
-export default function ScooterDetails() {
+export default function ScooterDetail() {
   const { id } = useParams();
   const scooter = scooters.find((item) => item._id === id);
 
@@ -219,12 +219,12 @@ export default function ScooterDetails() {
                 Warranty
               </h2>
               <dl className="rounded-2xl border border-line bg-white p-5">
-                {scooter.warranty.map(({ item, duration }) => (
+                {scooter.warranty.map(({ type, duration }) => (
                   <div
-                    key={item}
+                    key={type}
                     className="flex justify-between gap-4 py-2 text-[15px]"
                   >
-                    <dt className="text-text-secondary">{item}</dt>
+                    <dt className="text-text-secondary">{type}</dt>
                     <dd className="font-semibold text-ink">{duration}</dd>
                   </div>
                 ))}

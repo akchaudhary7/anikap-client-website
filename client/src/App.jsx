@@ -4,9 +4,12 @@ import Navbar from './components/Navbar'
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
-import scooters from "./data/scooters.json";
+import { scooters } from './assets/assets';
 import { formatPrice } from "./utils/formatPrice";
-import ScooterDetails from "./pages/ScooterDetails";
+import ScooterDetail from "./pages/ScooterDetail";
+import AllScooters from "./pages/AllScooters";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 
 function ScooterDetails() {
@@ -31,8 +34,10 @@ function AppRoutes() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/scooters" element={<Home />} />
-        <Route path="/scooters/:id" element={<ScooterDetails />} />
+        <Route path="/scooters" element={<AllScooters />} />
+        <Route path="/scooters/:id" element={<ScooterDetail />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
   );

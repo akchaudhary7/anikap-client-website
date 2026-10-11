@@ -4,7 +4,7 @@ import bimmer1 from "./bimmer1.jpeg";
 import bimmer2 from "./bimmer2.jpeg";
 import bimmer3 from "./bimmer3.jpeg";
 import bimmer4 from "./bimmer4.jpeg";
-import bimmerVideo from "./bimmer4.mp4";
+import bimmerVideo from "./bimmerVideo.mp4";
 import eyelight1 from "./eyelight1.jpeg";
 import eyelight2 from "./eyelight2.jpeg";
 import eyelight3 from "./eyelight3.jpeg";
@@ -18,6 +18,7 @@ import plenzer3 from "./plenzer3.jpeg";
 import plenzer4 from "./plenzer4.jpeg";
 import plenzer5 from "./plenzer5.jpeg";
 import starbooster from "./starbooster.jpeg";
+import showroom from './showroom.jpeg';
 
 export const assets = {
   logo,
@@ -40,6 +41,7 @@ export const assets = {
   plenzer4,
   plenzer5,
   starbooster,
+  showroom
 };
 
 export const scooters = [
@@ -57,7 +59,7 @@ export const scooters = [
     specs: "60V · 1000W · 12/10 tyre",
     year: "2026",
 
-    specification: {
+    specifications: {
       tyre: "12/12",
       battery: "72V",
       motorWatt: 1500,
@@ -98,14 +100,14 @@ export const scooters = [
     image: [bimmer1, bimmer2, bimmer3, bimmer4],
     video: bimmerVideo,
     category: "Electric",
-    type: "BLDC",
+    type: "Belt",
     label: "BLDC · DOUBLE DISK BRAKE",
     engine: "1200W waterproof",
     milage: "80 KM range",
     specs: "60V · 1000W · 12/10 tyre",
     year: "2026",
 
-    specification: {
+    specifications: {
       tyre: "12/12",
       battery: "72V",
       motorWatt: 1500,
@@ -146,14 +148,14 @@ export const scooters = [
     image: [eyelight1, eyelight2, eyelight3, eyelight4],
     video: eyelightVideo,
     category: "Electric",
-    type: "BLDC",
+    type: "Belt",
     label: "BLDC · DOUBLE DISK BRAKE",
     engine: "1200W waterproof",
     milage: "80 KM range",
     specs: "60V · 1000W · 12/10 tyre",
     year: "2026",
 
-    specification: {
+    specifications: {
       tyre: "12/12",
       battery: "72V",
       motorWatt: 1500,
@@ -201,7 +203,7 @@ export const scooters = [
     specs: "60V · 1000W · 12/10 tyre",
     year: "2026",
 
-    specification: {
+    specifications: {
       tyre: "12/12",
       battery: "72V",
       motorWatt: 1500,
@@ -249,7 +251,7 @@ export const scooters = [
     specs: "60V · 1000W · 12/10 tyre",
     year: "2026",
 
-    specification: {
+    specifications: {
       tyre: "12/12",
       battery: "72V",
       motorWatt: 1500,
@@ -297,7 +299,7 @@ export const scooters = [
     specs: "60V · 1000W · 12/10 tyre",
     year: "2026",
 
-    specification: {
+    specifications: {
       tyre: "12/12",
       battery: "72V",
       motorWatt: 1500,

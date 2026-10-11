@@ -22,7 +22,7 @@ const reviews = [
 export default function Home() {
   const featuredScooter = scooters[2] ?? scooters[0];
   const popularScooters = scooters.slice(0,3)
-  console.log(scooters);
+  // console.log(scooters);
   
 
   return (
