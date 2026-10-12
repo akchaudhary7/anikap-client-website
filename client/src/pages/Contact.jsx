@@ -27,6 +27,7 @@ export default function Contact() {
   const [form, setForm] = useState({
     name: "",
     phone: "",
+    address: "",
     scooterId: "",
     date: "",
   });
@@ -62,6 +63,7 @@ export default function Contact() {
         {
           user_name: form.name,
           user_phone: form.phone,
+          user_address: form.address,
           scooter_model: selectedScooter?.name || "Not selected",
           preferred_date: form.date,
         },
@@ -110,16 +112,16 @@ export default function Contact() {
               </div>
 
               <div>
-                <p className="text-text-muted">Showroom</p>
+                <p className="text-text-muted">Office</p>
                 <p className="text-base text-ink">
-                  Kithuri, Munderwa, Basti (U.P.)
+                  Munderwa, Basti (U.P.)
                 </p>
                 <p className="text-base text-ink">Pin Code 272170</p>
               </div>
 
               <div>
                 <p className="text-text-muted">Hours</p>
-                <p className="text-base text-ink">[ADD SHOWROOM HOURS]</p>
+                <p className="text-base text-ink">10 am - 6 pm, Mon - Sat</p>
               </div>
             </div>
 
@@ -205,6 +207,24 @@ export default function Contact() {
                 title="Enter a valid phone number"
                 className={inputClass}
                 value={form.phone}
+                onChange={updateField}
+                required
+              />
+            </label>
+
+            <label
+              className="block text-[13px] font-bold text-ink"
+              htmlFor="address"
+            >
+              Address
+              <input
+                id="address"
+                name="address"
+                type="text"
+                autoComplete="address"
+                placeholder="Address"
+                className={inputClass}
+                value={form.address}
                 onChange={updateField}
                 required
               />
