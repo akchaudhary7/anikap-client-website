@@ -19,6 +19,8 @@ export default function ScooterCard({ scooter }) {
         <img
           src={scooter.image[0]}
           alt={scooter.name}
+          loading="lazy"
+          decoding="async"
           className="aspect-[2.13/1] w-full object-cover"
         />
       </Link>
@@ -29,9 +31,16 @@ export default function ScooterCard({ scooter }) {
           aria-label={`View ${scooter.name} details`}
           className="block"
         >
-          <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-gold-dark">
-            {type}
-          </p>
+          <div className="flex flex-wrap gap-2">
+            {(Array.isArray(type) ? type : [type]).map((item) => (
+              <p
+                key={item}
+                className="text-xs font-extrabold uppercase tracking-[0.14em] text-gold-dark"
+              >
+                {item}
+              </p>
+            ))}
+          </div>
 
           <h3 className="mt-2 text-[17px] font-extrabold leading-snug text-ink">
             {scooter.name}

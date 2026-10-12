@@ -4,18 +4,24 @@ import ScooterCard from "../components/ScooterCard";
 import { scooters } from "../assets/assets.js";
 import PageSeo from "../components/PageSeo";
 
-const filters = ["All", "Belt", "BLDC"];
+const filters = ["All", "MID Drive", "BLDC"];
 
 export default function AllScooters() {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const visibleScooters =
-    activeFilter === "All"
-      ? scooters
-      : scooters.filter(
-          (scooter) =>
-            scooter.type?.toLowerCase() === activeFilter.toLowerCase(),
-        );
+  const visibleScooters = scooters
+  .filter((scooter) => {
+    if (activeFilter === "All") return true;
+
+    const types = Array.isArray(scooter.type)
+      ? scooter.type
+      : [scooter.type];
+
+    return types.some(
+      (type) => type?.toLowerCase() === activeFilter.toLowerCase()
+    );
+  })
+  .sort((a, b) => Number(a.price) - Number(b.price));
 
   return (
     <>
@@ -35,8 +41,8 @@ export default function AllScooters() {
             </h1>
 
             <p className="mt-3 text-base text-text-muted">
-              {scooters.length} models. All prices in Rs. Easy EMI available
-              with Bajaj Finance.
+              All models. All prices in Rs. Easy EMI available
+              with Bajaj Finance & Aakasha Finance.
             </p>
 
             <div

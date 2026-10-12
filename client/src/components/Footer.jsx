@@ -7,15 +7,15 @@ export default function Footer() {
         <div>
           <p className="font-extrabold text-white">ANIKA P ENTERPRISES</p>
           <p>EV Scooty · Spare Parts · Service · Finance</p>
-          <p>Kithuri, Munderwa, Basti (U.P.) – 272170</p>
+          <p>Munderwa, Basti (U.P.) – 272170</p>
         </div>
 
         <div className="md:text-right">
-          <p>Prem Prakash Chaudhary</p>
+          <p>Prem Prakash Chaudhary (MD)</p>
           <a className="hover:text-white" href="tel:7355364697">
             7355364697
           </a>
-          <p>Easy EMI with Bajaj Finance</p>
+          <p>Provide Dealership & Distribution</p>
         </div>
       </Container>
     </footer>

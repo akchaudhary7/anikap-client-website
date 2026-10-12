@@ -11,21 +11,29 @@ export default function ScooterDetail() {
   const scooter = scooters.find((item) => item._id === id);
 
   const images = Array.isArray(scooter?.image)
-    ? scooter.image
-    : scooter?.image
-      ? [scooter.image]
-      : [];
+  ? scooter.image
+  : scooter?.image
+    ? [scooter.image]
+    : [];
 
-  const media = [
-    ...images.map((src, index) => ({
-      key: `image-${index}`,
-      type: "image",
-      src,
-    })),
-    ...(scooter?.video
-      ? [{ key: "video", type: "video", src: scooter.video }]
-      : []),
-  ];
+const videos = Array.isArray(scooter?.video)
+  ? scooter.video
+  : scooter?.video
+    ? [scooter.video]
+    : [];
+
+const media = [
+  ...images.map((src, index) => ({
+    key: `image-${index}`,
+    type: "image",
+    src,
+  })),
+  ...videos.map((src, index) => ({
+    key: `video-${index}`,
+    type: "video",
+    src,
+  })),
+];
 
   const [selectedKey, setSelectedKey] = useState(null);
   const selectedMedia =
@@ -80,12 +88,15 @@ export default function ScooterDetail() {
                     poster={images[0]}
                     controls
                     playsInline
+                    preload="none"
                     className="h-full w-full object-contain"
                   />
                 ) : selectedMedia ? (
                   <img
                     src={selectedMedia.src}
                     alt={scooter.name}
+                    fetchPriority="high"
+                    decoding="async"
                     className="h-full w-full object-contain"
                   />
                 ) : (
@@ -122,6 +133,8 @@ export default function ScooterDetail() {
                       <img
                         src={item.type === "video" ? images[0] : item.src}
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                         className="h-full w-full object-contain"
                       />
                       {item.type === "video" && (

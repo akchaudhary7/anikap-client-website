@@ -9,15 +9,24 @@ import { Link } from "react-router-dom";
 
 const benefits = [
   ["Up to 2 years", "Motor warranty"],
-  ["Easy EMI", "Bajaj Finance, flexible tenure"],
-  ["Genuine parts", "Plus battery and charger"],
+  ["Easy EMI", "Bajaj Finance & Aakasha Finance"],
+  ["Genuine Spare Parts", "Plus battery and charger"],
   ["Service", "Maintenance and EV charging"],
 ];
 
 const reviews = [
-  ["[CUSTOMER REVIEW TEXT]", "[Customer name, town]"],
-  ["[CUSTOMER REVIEW TEXT]", "[Customer name, town]"],
-  ["[CUSTOMER REVIEW TEXT]", "[Customer name, town]"],
+  [
+    "“I use my scooter for daily trips around town, and it’s been convenient and easy to ride. The team was helpful from the first visit to delivery.”",
+    "Amit Chaudhary, Basti",
+  ],
+  [
+    "“Showroom par options dekhne aur test ride lene ka experience kaafi achha tha. EMI ke baare mein bhi clearly samjhaya, toh decision lena easy ho gaya.”",
+    "Ayush Sharma, Munderwa",
+  ],
+  [
+    "“Scooter lene ke baad roz ke kaam kaafi aasaan ho gaye hain. Service ke liye gaya toh team ne jaldi se check karke problem solve kar di.”",
+    "Abhishek Kumar Verma, Gayghat",
+  ],
 ];
 
 export default function Home() {
@@ -47,11 +56,13 @@ export default function Home() {
 
             <p className="mt-5 max-w-xl text-lg leading-[1.6] text-text-secondary">
               Har Ghar Scooty. Brand-new electric scooters from Rs 49,500, with
-              up to 2 years motor warranty and easy EMI through Bajaj Finance & Aakasha Finance.
+              up to 2 years motor warranty and easy EMI through Bajaj Finance &
+              Aakasha Finance.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link to="/contact#test-ride-form"
+              <Link
+                to="/contact#test-ride-form"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-gold bg-gold px-6 text-sm font-bold text-ink transition hover:bg-gold-dark"
               >
                 Book a test ride
@@ -140,25 +151,36 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Test ride call to action */}
+      {/* Dealership and distribution CTA */}
       <section className="bg-night py-16 text-center text-white md:py-20">
         <Container>
           <h2 className="text-3xl font-bold md:text-4xl">
-            Come ride before you decide.
+            Dealership and Distribution
           </h2>
+
           <p className="mt-4 text-white/70">
-            Book a free test ride at our Kithuri showroom.
+            Interested in partnering with us? Contact us for more details.
           </p>
-          <a
-            href={buildWhatsAppLink(
-              "Hello, I would like to book a free test ride at your Kithuri showroom.",
-            )}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full border border-gold bg-gold px-6 text-sm font-bold text-ink transition hover:bg-gold-dark"
-          >
-            Book a test ride
-          </a>
+
+          <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href="tel:7355364697"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-gold bg-gold px-6 text-sm font-bold text-ink transition hover:bg-gold-dark"
+            >
+              Call us
+            </a>
+
+            <a
+              href={buildWhatsAppLink(
+                "Hello, I would like to know more about dealership and distribution opportunities.",
+              )}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/50 px-6 text-sm font-bold text-white transition hover:bg-white/10"
+            >
+              WhatsApp us
+            </a>
+          </div>
         </Container>
       </section>
     </>
