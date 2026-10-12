@@ -41,7 +41,7 @@ export default function AllScooters() {
             </h1>
 
             <p className="mt-3 text-base text-text-muted">
-              All models. All prices in Rs. Easy EMI available
+              All models. All prices in Rs.(₹) Easy EMI available
               with Bajaj Finance & Aakasha Finance.
             </p>
 
