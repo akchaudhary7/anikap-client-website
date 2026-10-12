@@ -17,15 +17,15 @@ const benefits = [
 const reviews = [
   [
     "“I use my scooter for daily trips around town, and it’s been convenient and easy to ride. The team was helpful from the first visit to delivery.”",
-    "Amit Chaudhary, Basti",
+    "Abhishek Kumar Verma, Basti",
   ],
   [
     "“Showroom par options dekhne aur test ride lene ka experience kaafi achha tha. EMI ke baare mein bhi clearly samjhaya, toh decision lena easy ho gaya.”",
-    "Ayush Sharma, Munderwa",
+    "Om Prakash, Munderwa",
   ],
   [
     "“Scooter lene ke baad roz ke kaam kaafi aasaan ho gaye hain. Service ke liye gaya toh team ne jaldi se check karke problem solve kar di.”",
-    "Abhishek Kumar Verma, Gayghat",
+    "Amit Chaudhary, Gayghat",
   ],
 ];
 

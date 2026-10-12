@@ -3,12 +3,12 @@ import { assets } from "../assets/assets.js";
 import PageSeo from "../components/PageSeo";
 
 const services = [
-  ["Electric scooty", "All models, new"],
-  ["Genuine spare parts", "For every model we sell"],
+  ["Dealership & Distribution", "We offer dealership & distribution in UP"],
+  ["Electric scooty/E-Rikshaw Loader", "All new models"],
+  ["Genuine spare parts", "We sell for every model"],
   ["Service and maintenance", "Keep your scooter running well"],
   ["Battery and charger", "Lead acid and lithium options"],
   ["EV charging solution", "Charging help for your home"],
-  ["Easy finance", "EMI with Bajaj Finance"],
 ];
 
 export default function About() {
@@ -30,8 +30,8 @@ export default function About() {
           </h1>
 
           <p className="mt-5 max-w-2xl text-base leading-[1.6] text-text-subtle sm:text-lg">
-            Anika P Enterprises is an electric scooty dealership in Kithuri,
-            Munderwa, Basti (U.P.), bringing Har Ghar Scooty to local families.
+            Anika P Enterprises is an electric scooty dealership & distributer
+            in Basti (U.P.), bringing Har Ghar Scooty to all families.
           </p>
         </Container>
       </section>
@@ -39,12 +39,12 @@ export default function About() {
       {/* Story */}
       <section className="py-12 md:py-[72px]">
         <Container className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
-          <div className="grid aspect-[4/3] place-items-center overflow-hidden rounded-3xl bg-sand text-sm text-placeholder">
+          <div className="grid aspect-[5/3] place-items-center overflow-hidden rounded-3xl bg-sand text-sm text-placeholder">
             {assets.showroom ? (
               <img
                 src={assets.showroom}
                 alt="Anika P Enterprises showroom"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
             ) : (
               "Add a showroom photo"
@@ -64,9 +64,10 @@ export default function About() {
             <p className="mt-5 font-extrabold text-ink">
               Prem Prakash Chaudhary
             </p>
-            <p className="mt-1 text-sm text-text-muted">
-              MD, Chief Director
-            </p>
+            <p className="mt-1 text-sm text-text-muted">MD, Chief Director</p>
+            <p className="mt-1 text-sm text-text-muted"><a className="hover:text-black" href="tel:7355364697">
+            7355364697
+          </a></p>
           </div>
         </Container>
       </section>
