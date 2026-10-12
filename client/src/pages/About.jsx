@@ -65,7 +65,7 @@ export default function About() {
               Prem Prakash Chaudhary
             </p>
             <p className="mt-1 text-sm text-text-muted">
-              Replace with role/title
+              MD, Chief Director
             </p>
           </div>
         </Container>
