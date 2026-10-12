@@ -50,7 +50,7 @@ export const scooters = [
     name: "Alfa+ (BLDC)",
     price: 41000,
     image: [alfadrl],
-    video: bimmerVideo,
+    
     category: "Electric",
     type: "BLDC",
     label: "BLDC · DOUBLE DISK BRAKE",
@@ -194,7 +194,7 @@ export const scooters = [
     name: "Nuzzledrl",
     price: 41000,
     image: [nuzzledrl1, nuzzledrl2],
-    video: eyelightVideo,
+    
     category: "Electric",
     type: "BLDC",
     label: "BLDC · DOUBLE DISK BRAKE",
@@ -242,7 +242,7 @@ export const scooters = [
     name: "Plenzer",
     price: 41000,
     image: [plenzer1, plenzer2, plenzer3, plenzer4, plenzer5],
-    video: eyelightVideo,
+    
     category: "Electric",
     type: "BLDC",
     label: "BLDC · DOUBLE DISK BRAKE",
@@ -290,7 +290,7 @@ export const scooters = [
     name: "Starbooster",
     price: 41000,
     image: [starbooster],
-    video: eyelightVideo,
+    
     category: "Electric",
     type: "BLDC",
     label: "BLDC · DOUBLE DISK BRAKE",

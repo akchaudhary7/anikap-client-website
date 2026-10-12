@@ -166,16 +166,11 @@ export default function ScooterDetail() {
               )}
 
               <div className="mt-5 flex flex-wrap gap-3">
-                <a
-                  href={buildWhatsAppLink(
-                    `Hello, I would like to book a test ride for the ${scooter.name}.`,
-                  )}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-gold px-6 text-[15px] font-extrabold text-ink hover:bg-gold-dark"
-                >
-                  Book a test ride
-                </a>
+                <Link to="/contact#test-ride-form"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-gold bg-gold px-6 text-sm font-bold text-ink transition hover:bg-gold-dark"
+              >
+                Book a test ride
+              </Link>
 
                 <a
                   href={whatsappHref}

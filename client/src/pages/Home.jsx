@@ -5,6 +5,7 @@ import ScooterCard from "../components/ScooterCard";
 import { buildWhatsAppLink } from "../utils/whatsapp";
 import { scooters } from "../assets/assets";
 import PageSeo from "../components/PageSeo";
+import { Link } from "react-router-dom";
 
 const benefits = [
   ["Up to 2 years", "Motor warranty"],
@@ -35,7 +36,7 @@ export default function Home() {
         <Container className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
           <div>
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.16em] text-leaf">
-              New electric scooters · Basti
+              New electric scooters · India
             </p>
 
             <h1 className="max-w-xl text-4xl font-extrabold leading-[1.05] text-ink sm:text-5xl lg:text-[60px]">
@@ -45,21 +46,16 @@ export default function Home() {
             </h1>
 
             <p className="mt-5 max-w-xl text-lg leading-[1.6] text-text-secondary">
-              Har Ghar Scooty. Brand-new electric scooters from Rs 41,500, with
-              up to 2 years motor warranty and easy EMI through Bajaj Finance.
+              Har Ghar Scooty. Brand-new electric scooters from Rs 49,500, with
+              up to 2 years motor warranty and easy EMI through Bajaj Finance & Aakasha Finance.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <a
-                href={buildWhatsAppLink(
-                  "Hello, I would like to book a scooter test ride at your Kithuri showroom.",
-                )}
-                target="_blank"
-                rel="noreferrer"
+              <Link to="/contact#test-ride-form"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-gold bg-gold px-6 text-sm font-bold text-ink transition hover:bg-gold-dark"
               >
                 Book a test ride
-              </a>
+              </Link>
 
               <a
                 href={buildWhatsAppLink(
