@@ -80,13 +80,13 @@ export default function ScooterDetail() {
                     poster={images[0]}
                     controls
                     playsInline
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                   />
                 ) : selectedMedia ? (
                   <img
                     src={selectedMedia.src}
                     alt={scooter.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                   />
                 ) : (
                   <div className="grid h-full place-items-center text-text-muted">
@@ -122,7 +122,7 @@ export default function ScooterDetail() {
                       <img
                         src={item.type === "video" ? images[0] : item.src}
                         alt=""
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-contain"
                       />
                       {item.type === "video" && (
                         <span className="absolute inset-0 grid place-items-center bg-black/40 text-sm font-bold text-white">
