@@ -5,6 +5,7 @@ import { QRCodeSVG } from "qrcode.react";
 import Container from "../components/Container";
 import { scooters } from "../assets/assets.js";
 import { buildWhatsAppLink } from "../utils/whatsapp";
+import PageSeo from "../components/PageSeo";
 
 const GOOGLE_SHOP_URL =
   import.meta.env.VITE_GOOGLE_SHOP_URL ||
@@ -49,7 +50,7 @@ export default function Contact() {
     }
 
     const selectedScooter = scooters.find(
-      (scooter) => scooter._id === form.scooterId
+      (scooter) => scooter._id === form.scooterId,
     );
 
     setSending(true);
@@ -64,7 +65,7 @@ export default function Contact() {
           scooter_model: selectedScooter?.name || "Not selected",
           preferred_date: form.date,
         },
-        { publicKey }
+        { publicKey },
       );
 
       toast.success("Request sent! We’ll call you to confirm.");
@@ -78,6 +79,10 @@ export default function Contact() {
 
   return (
     <>
+      <PageSeo
+        title="Contact and Test Rides"
+        description="Contact Anika P Enterprises in Kithuri, Basti, or request an electric scooter test ride."
+      />
       <Toaster position="top-center" />
 
       <section className="bg-white py-12 md:py-[72px]">
@@ -106,7 +111,9 @@ export default function Contact() {
 
               <div>
                 <p className="text-text-muted">Showroom</p>
-                <p className="text-base text-ink">Kithuri, Munderwa, Basti (U.P.)</p>
+                <p className="text-base text-ink">
+                  Kithuri, Munderwa, Basti (U.P.)
+                </p>
                 <p className="text-base text-ink">Pin Code 272170</p>
               </div>
 
@@ -124,7 +131,9 @@ export default function Contact() {
                 Call now
               </a>
               <a
-                href={buildWhatsAppLink("Hello, I have a question about your scooters.")}
+                href={buildWhatsAppLink(
+                  "Hello, I have a question about your scooters.",
+                )}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-ink px-7 text-[15px] font-extrabold text-ink hover:bg-mist"
@@ -161,7 +170,10 @@ export default function Contact() {
               Book a test ride
             </h2>
 
-            <label className="block text-[13px] font-bold text-ink" htmlFor="name">
+            <label
+              className="block text-[13px] font-bold text-ink"
+              htmlFor="name"
+            >
               Your name
               <input
                 id="name"
@@ -176,7 +188,10 @@ export default function Contact() {
               />
             </label>
 
-            <label className="mt-4 block text-[13px] font-bold text-ink" htmlFor="phone">
+            <label
+              className="mt-4 block text-[13px] font-bold text-ink"
+              htmlFor="phone"
+            >
               Phone number
               <input
                 id="phone"
@@ -216,7 +231,10 @@ export default function Contact() {
               </select>
             </label>
 
-            <label className="mt-4 block text-[13px] font-bold text-ink" htmlFor="date">
+            <label
+              className="mt-4 block text-[13px] font-bold text-ink"
+              htmlFor="date"
+            >
               Preferred date
               <input
                 id="date"

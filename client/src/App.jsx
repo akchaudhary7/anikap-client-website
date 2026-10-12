@@ -10,6 +10,7 @@ import ScooterDetail from "./pages/ScooterDetail";
 import AllScooters from "./pages/AllScooters";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 
 function ScooterDetails() {
@@ -38,6 +39,8 @@ function AppRoutes() {
         <Route path="/scooters/:id" element={<ScooterDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+
       </Route>
     </Routes>
   );

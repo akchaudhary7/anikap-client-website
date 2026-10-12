@@ -3,8 +3,8 @@ import Container from "../components/Container";
 import ScooterCard from "../components/ScooterCard";
 // import scooters from "../data/scooters.json";
 import { buildWhatsAppLink } from "../utils/whatsapp";
-import {scooters} from "../assets/assets";
-
+import { scooters } from "../assets/assets";
+import PageSeo from "../components/PageSeo";
 
 const benefits = [
   ["Up to 2 years", "Motor warranty"],
@@ -21,12 +21,15 @@ const reviews = [
 
 export default function Home() {
   const featuredScooter = scooters[2] ?? scooters[0];
-  const popularScooters = scooters.slice(0,3)
+  const popularScooters = scooters.slice(0, 3);
   // console.log(scooters);
-  
 
   return (
     <>
+      <PageSeo
+        title="Electric Scooters in Basti"
+        description="Explore electric scooters at Anika P Enterprises in Kithuri, Basti. View models, prices, and book a test ride."
+      />
       {/* Hero */}
       <section className="bg-mist py-12 md:py-18">
         <Container className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
@@ -49,7 +52,7 @@ export default function Home() {
             <div className="mt-7 flex flex-wrap gap-3">
               <a
                 href={buildWhatsAppLink(
-                  "Hello, I would like to book a scooter test ride at your Kithuri showroom."
+                  "Hello, I would like to book a scooter test ride at your Kithuri showroom.",
                 )}
                 target="_blank"
                 rel="noreferrer"
@@ -60,7 +63,7 @@ export default function Home() {
 
               <a
                 href={buildWhatsAppLink(
-                  "Hello, I would like to know more about your electric scooters."
+                  "Hello, I would like to know more about your electric scooters.",
                 )}
                 target="_blank"
                 rel="noreferrer"
@@ -85,7 +88,7 @@ export default function Home() {
 
       {/* Benefits */}
       <section className="py-8 md:py-10">
-       <Container className="grid grid-cols-2 gap-x-5 gap-y-7 lg:grid-cols-4">
+        <Container className="grid grid-cols-2 gap-x-5 gap-y-7 lg:grid-cols-4">
           {benefits.map(([title, description]) => (
             <div key={title}>
               <h2 className="font-bold text-ink">{title}</h2>
@@ -110,8 +113,8 @@ export default function Home() {
             </a>
           </div>
 
-         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {popularScooters.slice(0,3).map((scooter) => (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {popularScooters.slice(0, 3).map((scooter) => (
               <ScooterCard key={scooter._id} scooter={scooter} />
             ))}
           </div>
@@ -152,7 +155,7 @@ export default function Home() {
           </p>
           <a
             href={buildWhatsAppLink(
-              "Hello, I would like to book a free test ride at your Kithuri showroom."
+              "Hello, I would like to book a free test ride at your Kithuri showroom.",
             )}
             target="_blank"
             rel="noreferrer"

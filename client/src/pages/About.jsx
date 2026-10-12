@@ -1,5 +1,6 @@
 import Container from "../components/Container";
 import { assets } from "../assets/assets.js";
+import PageSeo from "../components/PageSeo";
 
 const services = [
   ["Electric scooty", "All models, new"],
@@ -13,6 +14,10 @@ const services = [
 export default function About() {
   return (
     <>
+      <PageSeo
+        title="About Anika P Enterprises"
+        description="Learn about Anika P Enterprises, an electric scooter dealership in Kithuri, Basti."
+      />
       {/* Dark intro */}
       <section className="bg-night py-14 text-white md:py-[72px]">
         <Container>
@@ -59,7 +64,9 @@ export default function About() {
             <p className="mt-5 font-extrabold text-ink">
               Prem Prakash Chaudhary
             </p>
-            <p className="mt-1 text-sm text-text-muted">Replace with role/title</p>
+            <p className="mt-1 text-sm text-text-muted">
+              Replace with role/title
+            </p>
           </div>
         </Container>
       </section>

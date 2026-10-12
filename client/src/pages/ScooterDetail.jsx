@@ -4,6 +4,7 @@ import Container from "../components/Container";
 import { scooters } from "../assets/assets.js";
 import { formatPrice } from "../utils/formatPrice";
 import { buildWhatsAppLink } from "../utils/whatsapp";
+import PageSeo from "../components/PageSeo";
 
 export default function ScooterDetail() {
   const { id } = useParams();
@@ -34,7 +35,10 @@ export default function ScooterDetail() {
     return (
       <Container className="py-16">
         <h1 className="text-3xl font-extrabold text-ink">Scooter not found</h1>
-        <Link to="/scooters" className="mt-4 inline-block font-semibold text-leaf">
+        <Link
+          to="/scooters"
+          className="mt-4 inline-block font-semibold text-leaf"
+        >
           ← Back to all scooters
         </Link>
       </Container>
@@ -42,17 +46,25 @@ export default function ScooterDetail() {
   }
 
   const whatsappHref = buildWhatsAppLink(
-    `Hello, I am interested in the ${scooter.name}. Please share more details.`
+    `Hello, I am interested in the ${scooter.name}. Please share more details.`,
   );
 
   return (
     <>
+      <PageSeo
+        title="All Electric Scooters"
+        description="Compare electric scooter models and prices at Anika P Enterprises in Basti."
+      />
       <section className="bg-white py-8 md:py-[72px]">
         <Container>
           <nav aria-label="Breadcrumb" className="mb-6 text-sm text-text-muted">
-            <Link to="/" className="hover:text-ink">Home</Link>
+            <Link to="/" className="hover:text-ink">
+              Home
+            </Link>
             <span> / </span>
-            <Link to="/scooters" className="hover:text-ink">All scooters</Link>
+            <Link to="/scooters" className="hover:text-ink">
+              All scooters
+            </Link>
             <span> / </span>
             <span className="font-semibold text-ink">{scooter.name}</span>
           </nav>
@@ -139,22 +151,24 @@ export default function ScooterDetail() {
 
               {scooter.specifications && (
                 <dl className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {Object.entries(scooter.specifications).map(([label, value]) => (
-                    <div
-                      key={label}
-                      className="rounded-2xl border border-line p-4"
-                    >
-                      <dt className="text-sm text-text-muted">{label}</dt>
-                      <dd className="mt-1 font-semibold text-ink">{value}</dd>
-                    </div>
-                  ))}
+                  {Object.entries(scooter.specifications).map(
+                    ([label, value]) => (
+                      <div
+                        key={label}
+                        className="rounded-2xl border border-line p-4"
+                      >
+                        <dt className="text-sm text-text-muted">{label}</dt>
+                        <dd className="mt-1 font-semibold text-ink">{value}</dd>
+                      </div>
+                    ),
+                  )}
                 </dl>
               )}
 
               <div className="mt-5 flex flex-wrap gap-3">
                 <a
                   href={buildWhatsAppLink(
-                    `Hello, I would like to book a test ride for the ${scooter.name}.`
+                    `Hello, I would like to book a test ride for the ${scooter.name}.`,
                   )}
                   target="_blank"
                   rel="noreferrer"
