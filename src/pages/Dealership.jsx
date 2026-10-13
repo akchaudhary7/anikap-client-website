@@ -38,32 +38,134 @@ const benefits = [
   },
 ];
 
+const featuredMilestones = [
+  {
+    months: "6 months",
+    quantity: "250 scooters",
+    gift: "Splendor bike",
+    image: assets.splender,
+    imageAlt: "Splendor bike milestone gift",
+    imageSize: "h-36 sm:h-40",
+    accent: "border-gold/30",
+  },
+  {
+    months: "10 months",
+    quantity: "400 scooters",
+    gift: "Apache RTR 160",
+    image: assets.rtr160,
+    imageAlt: "Apache RTR 160 milestone gift",
+    imageSize: "h-44 sm:h-48",
+    accent: "border-gold/40",
+  },
+  {
+    months: "14 months",
+    quantity: "700 scooters",
+    gift: "Royal Enfield Classic 350",
+    image: assets.classic350,
+    imageAlt: "Royal Enfield Classic 350 milestone gift",
+    imageSize: "h-52 sm:h-56",
+    accent: "border-gold/60",
+  },
+  {
+    months: "24 months",
+    quantity: "1200 scooters",
+    gift: "Alto K10",
+    image: assets.alto,
+    imageAlt: "Alto K10 milestone gift",
+    imageSize: "h-60 sm:h-64",
+    accent: "border-gold",
+  },
+];
+
+const additionalOffers = [
+  {
+    title: "First order rewards",
+    detail: "Choose the reward based on your first-order quantity.",
+    rewards: [
+      {
+        quantity: "16 scooters",
+        gift: "Bajaj mixer grinder",
+        image: assets.bajajmixer,
+      },
+      {
+        quantity: "32 scooters",
+        gift: "Crompton cooler",
+        image: assets.cooler,
+      },
+      {
+        quantity: "50 scooters",
+        gift: "One scooter",
+        image: assets.alfabldc1,
+      },
+    ],
+  },
+  {
+    title: "3-month order milestone",
+    detail: "Place a total order of 110 scooters within 3 months.",
+    rewards: [
+      {
+        quantity: "110 scooters",
+        gift: "1.5-ton, 5-star AC",
+        image: assets.ac,
+      },
+    ],
+  },
+];
+
 const offers = [
   {
     title: "First order rewards",
     detail: "Gifts based on the quantity in your first order.",
     rewards: [
-      { quantity: "16 scooters", reward: "Bajaj mixer grinder", image: assets.bajajmixer },
-      { quantity: "32 scooters", reward: "Crompton cooler", image: assets.cooler },
-      { quantity: "50 scooters", reward: "One scooter", image: assets.alfabldc1 },
+      {
+        quantity: "16 scooters",
+        reward: "Bajaj mixer grinder",
+        image: assets.bajajmixer,
+      },
+      {
+        quantity: "32 scooters",
+        reward: "Crompton cooler",
+        image: assets.cooler,
+      },
+      {
+        quantity: "50 scooters",
+        reward: "One scooter",
+        image: assets.alfabldc1,
+      },
     ],
   },
   {
     title: "3-month milestone",
     detail: "Reach a total order of 110 scooters within 3 months.",
     rewards: [
-      { quantity: "110 scooters", reward: "1.5-ton, 5-star AC", image: assets.ac },
+      {
+        quantity: "110 scooters",
+        reward: "1.5-ton, 5-star AC",
+        image: assets.ac,
+      },
     ],
   },
   {
     title: "6-month milestone",
     detail: "Reach a total order of 250 scooters within 6 months.",
-    rewards: [{ quantity: "250 scooters", reward: "Splendor bike", image: assets.splender }],
+    rewards: [
+      {
+        quantity: "250 scooters",
+        reward: "Splendor bike",
+        image: assets.splender,
+      },
+    ],
   },
   {
     title: "10-month milestone",
     detail: "Reach a total order of 400 scooters within 8 months.",
-    rewards: [{ quantity: "400 scooters", reward: "Apache RTR 160", image: assets.rtr160 }],
+    rewards: [
+      {
+        quantity: "400 scooters",
+        reward: "Apache RTR 160",
+        image: assets.rtr160,
+      },
+    ],
   },
   {
     title: "14-month milestone",
@@ -79,7 +181,9 @@ const offers = [
   {
     title: "24-month milestone",
     detail: "Reach a total order of 1200 scooters within 14 months.",
-    rewards: [{ quantity: "1200 scooters", reward: "Alto K10", image: assets.alto }],
+    rewards: [
+      { quantity: "1200 scooters", reward: "Alto K10", image: assets.alto },
+    ],
   },
 ];
 
@@ -196,36 +300,139 @@ export default function Dealership() {
               Partner offers
             </p>
             <h2 className="mt-3 text-3xl font-extrabold text-ink sm:text-4xl">
-              Rewards for your business growth
+              Rewards for growing your business
             </h2>
             <p className="mt-3 leading-relaxed text-text-secondary">
-              Offers may be temporary or ongoing. Contact our team to confirm
-              current availability and terms.
+              Start with first-order gifts, then work toward larger order
+              milestones. Contact us to confirm current offer availability and
+              terms.
             </p>
           </header>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {offers.map((offer) => (
+          {/* First-order and 3-month offers */}
+          <div className="mt-8 grid items-start gap-5 lg:grid-cols-2">
+            {additionalOffers.map((offer, offerIndex) => (
               <article
                 key={offer.title}
                 className="rounded-2xl border border-line bg-white p-5 sm:p-6"
               >
-                <h3 className="text-lg font-extrabold text-ink">
+                <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-gold-dark">
+                  {offerIndex === 0 ? "First order" : "Sales milestone"}
+                </p>
+                <h3 className="mt-2 text-xl font-extrabold text-ink">
                   {offer.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-text-muted">
                   {offer.detail}
                 </p>
-                <div className="mt-4 grid gap-3">
-                  {offer.rewards.map((item) => (
-                    <RewardItem key={item.reward} {...item} />
+
+                <div
+                  className={`mt-5 grid gap-3 ${
+                    offer.rewards.length > 1 ? "sm:grid-cols-2" : "grid-cols-1"
+                  }`}
+                >
+                  {offer.rewards.map((reward) => (
+                    <div
+                      key={reward.gift}
+                      className={`flex items-center gap-4 rounded-xl border border-line bg-mist p-3 ${
+                        offer.rewards.length === 1 ? "sm:p-5" : ""
+                      } ${
+                        reward.gift.toLowerCase().includes("scooter")
+                          ? "w-full sm:col-span-2"
+                          : ""
+                      }`}
+                    >
+                      <div
+                        className={`grid shrink-0 place-items-center overflow-hidden rounded-lg bg-white p-2 ${
+                          offer.rewards.length === 1
+                            ? "h-28 w-32 sm:h-36 sm:w-40"
+                            : reward.gift.toLowerCase().includes("scooter")
+                              ? "h-28 w-36 sm:h-36 sm:w-48"
+                              : "h-20 w-24"
+                        }`}
+                      >
+                        <img
+                          src={reward.image}
+                          alt={reward.gift}
+                          loading="lazy"
+                          decoding="async"
+                          className="h-full w-full object-contain"
+                        />
+                      </div>
+
+                      <div>
+                        <p className="text-sm font-semibold text-leaf">
+                          {reward.quantity}
+                        </p>
+                        <p className="mt-1 font-extrabold leading-snug text-ink">
+                          {reward.gift}
+                        </p>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </article>
             ))}
           </div>
 
-          <aside className="mt-8 rounded-2xl border border-line bg-white p-5 sm:p-6">
+          {/* Larger milestone gifts */}
+          <div className="mt-14">
+            <header className="max-w-3xl">
+              <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-gold-dark">
+                Milestone rewards
+              </p>
+              <h3 className="mt-3 text-2xl font-extrabold text-ink sm:text-3xl">
+                Bigger milestones. Bigger rewards.
+              </h3>
+              <p className="mt-3 leading-relaxed text-text-secondary">
+                Reach each total-order target within its stated period to
+                qualify.
+              </p>
+            </header>
+
+            <div className="mt-7 grid items-end gap-5 sm:grid-cols-2 xl:grid-cols-4">
+              {featuredMilestones.map((offer, index) => (
+                <article
+                  key={offer.gift}
+                  className={`relative overflow-hidden rounded-2xl border-2 ${offer.accent} bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                    index === featuredMilestones.length - 1
+                      ? "xl:-translate-y-3 xl:shadow-lg"
+                      : ""
+                  }`}
+                >
+                  <span className="absolute right-6 top-6 z-10 rounded-full bg-gold px-3 py-1 text-xs font-extrabold text-ink">
+                    {offer.months}
+                  </span>
+
+                  <div
+                    className={`grid ${offer.imageSize} place-items-center overflow-hidden rounded-xl bg-gradient-to-br from-mist via-white to-[#F3E6B8] p-3`}
+                  >
+                    <img
+                      src={offer.image}
+                      alt={offer.imageAlt}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-contain drop-shadow-xl"
+                    />
+                  </div>
+
+                  <div className="px-1 pb-2 pt-5">
+                    <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-gold-dark">
+                      {offer.quantity} total order
+                    </p>
+                    <h4 className="mt-2 text-lg font-extrabold leading-snug text-ink">
+                      {offer.gift}
+                    </h4>
+                    <p className="mt-2 text-sm text-text-muted">
+                      Reach the milestone within {offer.months}.
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <aside className="mt-10 rounded-2xl border border-line bg-white p-5 sm:p-6">
             <h3 className="font-extrabold text-ink">Terms and conditions</h3>
             <p className="mt-2 text-sm leading-relaxed text-text-muted">
               Offers may be temporary or ongoing and are subject to confirmation
@@ -238,14 +445,14 @@ export default function Dealership() {
 
           <div className="mt-8 flex flex-col items-start justify-between gap-5 rounded-3xl bg-night p-6 text-white sm:flex-row sm:items-center sm:p-8">
             <div>
-              <h2 className="text-2xl font-extrabold">
-                Interested in becoming a partner?
-              </h2>
+              <h3 className="text-2xl font-extrabold">
+                Ready to become a partner?
+              </h3>
               <p className="mt-2 text-sm text-white/70">
-                Contact us to discuss dealership, distributorship, and current
-                offers.
+                Contact us to discuss the dealership and current offers.
               </p>
             </div>
+
             <ContactButtons dark />
           </div>
         </Container>
