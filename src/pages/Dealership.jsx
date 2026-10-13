@@ -157,22 +157,22 @@ const offers = [
     ],
   },
   {
-    title: "10-month milestone",
+    title: "12-month milestone",
     detail: "Reach a total order of 400 scooters within 8 months.",
     rewards: [
       {
-        quantity: "400 scooters",
+        quantity: "500 scooters",
         reward: "Apache RTR 160",
         image: assets.rtr160,
       },
     ],
   },
   {
-    title: "14-month milestone",
+    title: "18-month milestone",
     detail: "Reach a total order of 700 scooters within 10 months.",
     rewards: [
       {
-        quantity: "700 scooters",
+        quantity: "750 scooters",
         reward: "Royal Enfield Classic 350",
         image: assets.classic350,
       },
