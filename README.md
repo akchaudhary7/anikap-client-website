@@ -2,6 +2,8 @@
 
 A responsive dealership website for Anika P Enterprises, an electric scooter dealer serving customers in Basti, Uttar Pradesh. The site helps visitors explore scooter models, compare specifications and prices, learn about the dealership, and request a test ride.
 
+**Live website:** [anikapenterprises.in](https://anikapenterprises.in)
+
 ## Features
 
 - Responsive home, scooter catalogue, scooter detail, About, Contact, and 404 pages
