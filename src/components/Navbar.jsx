@@ -6,6 +6,7 @@ import { assets } from "../assets/assets";
 const links = [
   { label: "Home", to: "/" },
   { label: "Scooters", to: "/scooters" },
+  { label: "Dealership", to: "/dealership" },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];

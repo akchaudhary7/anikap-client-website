@@ -4,7 +4,7 @@ import PageSeo from "../components/PageSeo";
 
 const services = [
   ["Dealership & Distribution", "We offer dealership & distribution in UP"],
-  ["Electric scooty/E-Rikshaw Loader", "All new models"],
+  ["Electric scooty/E-Rikshaw/Loader", "All new models"],
   ["Genuine spare parts", "We sell for every model"],
   ["Service and maintenance", "Keep your scooter running well"],
   ["Battery and charger", "Lead acid and lithium options"],
@@ -12,6 +12,9 @@ const services = [
 ];
 
 export default function About() {
+  const emailAddress = "info@anikapenterprises.in";
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailAddress)}`;
+
   return (
     <>
       <PageSeo
@@ -65,9 +68,20 @@ export default function About() {
               Prem Prakash Chaudhary
             </p>
             <p className="mt-1 text-sm text-text-muted">MD, Chief Director</p>
-            <p className="mt-1 text-sm text-text-muted"><a className="hover:text-black" href="tel:7355364697">
-            7355364697
-          </a></p>
+            <a
+              href={gmailComposeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-text-muted transition hover:text-black hover:underline"
+            >
+              {emailAddress}
+            </a>
+
+            <p className="mt-1 text-sm text-text-muted">
+              <a className="hover:text-black hover:underline" href="tel:7355364697">
+                7355364697
+              </a>
+            </p>
           </div>
         </Container>
       </section>

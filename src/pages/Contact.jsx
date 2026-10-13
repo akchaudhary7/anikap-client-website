@@ -33,6 +33,10 @@ export default function Contact() {
   });
   const [sending, setSending] = useState(false);
 
+  const emailAddress = "info@anikapenterprises.in";
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailAddress)}`;
+
+
   function updateField(event) {
     const { name, value } = event.target;
     setForm((current) => ({ ...current, [name]: value }));
@@ -101,21 +105,28 @@ export default function Contact() {
 
             <div className="mt-7 space-y-6 text-sm leading-[1.7]">
               <div>
-                <p className="text-text-muted">Phone and WhatsApp</p>
+                <p className="text-text-muted">Contact</p>
                 <a
                   href="tel:7355364697"
                   className="block text-2xl font-extrabold text-ink hover:underline"
                 >
                   7355364697
                 </a>
-                <p className="text-text-muted">Prem Prakash Chaudhary</p>
+                <a
+                  href={gmailComposeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-2xl font-extrabold text-ink transition hover:underline"
+                >
+                  {emailAddress}
+                </a>
+
+                <p className="block text-2xl font-extrabold text-ink">Prem Prakash Chaudhary</p>
               </div>
 
               <div>
                 <p className="text-text-muted">Office</p>
-                <p className="text-base text-ink">
-                  Munderwa, Basti (U.P.)
-                </p>
+                <p className="text-base text-ink">Munderwa, Basti (U.P.)</p>
                 <p className="text-base text-ink">Pin Code 272170</p>
               </div>
 
