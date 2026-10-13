@@ -78,11 +78,11 @@ import starboosterVideo from "./starboosterVideo.mp4";
 import showroom from "./showroom.jpeg";
 
 import ac from './ac.jpg';
-import alto from './alto.jpg';
+import alto from './alto1.png';
 import bajajmixer from './bajajmixer.jpeg';
 import classic350 from './classic350.png';
 import cooler from './cooler.jpg';
-import splender from './splender.jpg';
+import splender from './splender1.png';
 import rtr160 from './rtr160.png';
 
 
