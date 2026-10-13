@@ -59,10 +59,20 @@ export default function About() {
               Our story
             </h2>
 
-            <p className="mt-4 text-base leading-[1.6] text-text-secondary">
-              Replace this text with your story: when you started, why you chose
-              electric scooters, and what you promise your customers.
-            </p>
+            <p className="block mt-4 text-base leading-[1.6] text-text-secondary">
+              Anika P Enterprises was founded with a vision to drive the future
+              of mobility in Uttar Pradesh. Based in Basti, we are an authorized
+              dealer of advanced electric two-wheelers. We started with a simple
+              belief - India deserves affordable, eco-friendly, and powerful
+              transportation. With rising fuel costs and pollution, we wanted to
+              bring a change in our own district first. Today, we are not just
+              selling electric scooters, we are building a complete EV ecosystem
+              with sales, service, and dealership opportunities for young
+              entrepreneurs across UP. 
+              </p>
+              <p className="inline font-bold">Our Mission:</p> To make every ride green,
+              affordable, and reliable.
+            
 
             <p className="mt-5 font-extrabold text-ink">
               Prem Prakash Chaudhary
@@ -78,7 +88,10 @@ export default function About() {
             </a>
 
             <p className="mt-1 text-sm text-text-muted">
-              <a className="hover:text-black hover:underline" href="tel:7355364697">
+              <a
+                className="hover:text-black hover:underline"
+                href="tel:7355364697"
+              >
                 7355364697
               </a>
             </p>
