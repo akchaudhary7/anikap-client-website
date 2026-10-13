@@ -77,6 +77,15 @@ import starboosterVideo from "./starboosterVideo.mp4";
 
 import showroom from "./showroom.jpeg";
 
+import ac from './ac.jpg';
+import alto from './alto.jpg';
+import bajajmixer from './bajajmixer.jpeg';
+import classic350 from './classic350.png';
+import cooler from './cooler.jpg';
+import splender from './splender.jpg';
+import rtr160 from './rtr160.png';
+
+
 export const assets = {
   logo,
 
@@ -156,6 +165,14 @@ export const assets = {
   starboosterVideo,
 
   showroom,
+
+  ac,
+  alto,
+  bajajmixer,
+  classic350,
+  cooler,
+  rtr160,
+  splender,
 };
 
 export const scooters = [

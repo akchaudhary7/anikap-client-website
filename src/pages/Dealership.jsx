@@ -1,6 +1,7 @@
 import Container from "../components/Container";
 import PageSeo from "../components/PageSeo";
 import { buildWhatsAppLink } from "../utils/whatsapp";
+import { assets } from "../assets/assets";
 
 const benefits = [
   {
@@ -42,43 +43,43 @@ const offers = [
     title: "First order rewards",
     detail: "Gifts based on the quantity in your first order.",
     rewards: [
-      { quantity: "16 scooters", reward: "Bajaj mixer grinder", image: null },
-      { quantity: "32 scooters", reward: "Crompton cooler", image: null },
-      { quantity: "40 scooters", reward: "One scooter", image: null },
+      { quantity: "16 scooters", reward: "Bajaj mixer grinder", image: assets.bajajmixer },
+      { quantity: "32 scooters", reward: "Crompton cooler", image: assets.cooler },
+      { quantity: "50 scooters", reward: "One scooter", image: assets.alfabldc1 },
     ],
   },
   {
     title: "3-month milestone",
     detail: "Reach a total order of 110 scooters within 3 months.",
     rewards: [
-      { quantity: "110 scooters", reward: "1.5-ton, 5-star AC", image: null },
+      { quantity: "110 scooters", reward: "1.5-ton, 5-star AC", image: assets.ac },
     ],
   },
   {
     title: "6-month milestone",
     detail: "Reach a total order of 250 scooters within 6 months.",
-    rewards: [{ quantity: "250 scooters", reward: "Splendor bike", image: null }],
-  },
-  {
-    title: "8-month milestone",
-    detail: "Reach a total order of 400 scooters within 8 months.",
-    rewards: [{ quantity: "400 scooters", reward: "Apache RTR 160", image: null }],
+    rewards: [{ quantity: "250 scooters", reward: "Splendor bike", image: assets.splender }],
   },
   {
     title: "10-month milestone",
+    detail: "Reach a total order of 400 scooters within 8 months.",
+    rewards: [{ quantity: "400 scooters", reward: "Apache RTR 160", image: assets.rtr160 }],
+  },
+  {
+    title: "14-month milestone",
     detail: "Reach a total order of 700 scooters within 10 months.",
     rewards: [
       {
         quantity: "700 scooters",
         reward: "Royal Enfield Classic 350",
-        image: null,
+        image: assets.classic350,
       },
     ],
   },
   {
-    title: "14-month milestone",
-    detail: "Reach a total order of 1,000 scooters within 14 months.",
-    rewards: [{ quantity: "1,000 scooters", reward: "Alto K10", image: null }],
+    title: "24-month milestone",
+    detail: "Reach a total order of 1200 scooters within 14 months.",
+    rewards: [{ quantity: "1200 scooters", reward: "Alto K10", image: assets.alto }],
   },
 ];
 
