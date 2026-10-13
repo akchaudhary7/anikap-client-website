@@ -154,6 +154,7 @@ export default function Home() {
       {/* Dealership and distribution CTA */}
       <section className="bg-night py-16 text-center text-white md:py-20">
         <Container>
+          <Link to='/dealership'>
           <h2 className="text-3xl font-bold md:text-4xl">
             Dealership and Distribution
           </h2>
@@ -161,6 +162,7 @@ export default function Home() {
           <p className="mt-4 text-white/70">
             Interested in partnering with us? Contact us for more details.
           </p>
+          </Link>
 
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
