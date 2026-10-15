@@ -49,8 +49,8 @@ const featuredMilestones = [
     accent: "border-gold/30",
   },
   {
-    months: "10 months",
-    quantity: "400 scooters",
+    months: "12 months",
+    quantity: "500 scooters",
     gift: "Apache RTR 160",
     image: assets.rtr160,
     imageAlt: "Apache RTR 160 milestone gift",
@@ -58,8 +58,8 @@ const featuredMilestones = [
     accent: "border-gold/40",
   },
   {
-    months: "14 months",
-    quantity: "700 scooters",
+    months: "18 months",
+    quantity: "750 scooters",
     gift: "Royal Enfield Classic 350",
     image: assets.classic350,
     imageAlt: "Royal Enfield Classic 350 milestone gift",
